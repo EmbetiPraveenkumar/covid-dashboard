@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+/* Dashboard Background */
+
+.dashboard-container{
+  min-height:100vh;
+  background: linear-gradient(135deg,#1d2b64,#f8cdda);
+  padding:40px;
+}
+
+
+
+.header{
+  text-align:center;
+  color:white;
+  font-size:34px;
+  font-weight:600;
+  margin-bottom:40px;
+  letter-spacing:1px;
+}
+
+
+
+.stats-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  margin-bottom:50px;
+}
+
+
+.stat-card{
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(10px);
+  border-radius:15px;
+  padding:25px;
+  color:white;
+  text-align:center;
+  transition:0.3s;
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+
+.stat-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 30px rgba(0,0,0,0.35);
+}
+
+
+.stat-card h3{
+  font-weight:400;
+  margin-bottom:10px;
+  letter-spacing:0.5px;
+}
+
+
+.stat-card h2{
+  font-size:32px;
+  font-weight:600;
+}
+
+
+.chart-container{
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  max-width:700px;
+  margin:auto;
+}

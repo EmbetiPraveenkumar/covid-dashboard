@@ -1,0 +1,61 @@
+
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  padding:18px 30px;
+  border-radius:12px;
+  margin-bottom:35px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.25);
+}
+
+.header h1{
+  color:white;
+  font-size:28px;
+  font-weight:600;
+  letter-spacing:1px;
+}
+
+
+
+.country-select-container{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.country-select-container label{
+  color:white;
+  font-size:14px;
+  font-weight:400;
+}
+
+
+
+.country-select{
+  padding:8px 12px;
+  border-radius:8px;
+  border:none;
+  outline:none;
+  font-size:14px;
+  background:white;
+  cursor:pointer;
+  transition:0.25s;
+  box-shadow:0 3px 10px rgba(0,0,0,0.15);
+}
+
+
+
+.country-select:hover{
+  transform:translateY(-1px);
+  box-shadow:0 5px 14px rgba(0,0,0,0.2);
+}
+
+
+
+.country-select:focus{
+  box-shadow:0 0 0 2px #4f8cff;
+}
