@@ -17,6 +17,7 @@ function Home() {
           <button className="start-btn">View Dashboard</button>
         </Link>
       </div>
+  
     </div>
   );
 }

@@ -6,7 +6,7 @@ import { fetchCovidData } from "../redux/CovidSlice";
 import Header from "./Header";
 import StatCard from "./StatCard";
 import Chart from "./Chart";
-import Footer from "./footer";
+
 
 
 import "../styles/Dashboard.css";
@@ -62,7 +62,7 @@ const displaydetails = countrydetails || data
               recovered={displaydetails.recovered}
             />
           </div>
-          <Footer />
+
         </>
       )}
     </div>
