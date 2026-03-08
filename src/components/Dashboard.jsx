@@ -6,12 +6,14 @@ import { fetchCovidData } from "../redux/CovidSlice";
 import Header from "./Header";
 import StatCard from "./StatCard";
 import Chart from "./Chart";
+import Footer from "./footer";
+
 
 import "../styles/Dashboard.css";
 
 function Dashboard() {
   const dispatch = useDispatch();
-  const { data } = useSelector((state) => state.covid);
+  const { data,loading } = useSelector((state) => state.covid);
  
   const [countrydetails,setCountrydata] = useState()
 
@@ -26,18 +28,31 @@ function Dashboard() {
     dispatch(fetchCovidData());
   }, [dispatch]);
 
+  if(loading) return (
+    <h3
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+      }}
+    >
+      loading...
+    </h3>
+  );
 const displaydetails = countrydetails || data
 
   return (
     <div className="dashboard-container">
+
       <Header countrydata={countrydata} countrydetails={countrydetails} />
-      
+
       {displaydetails && (
         <>
           <div className="stats-container">
-            <StatCard title="Total Cases" value={displaydetails.cases} />
-            <StatCard title="Deaths" value={displaydetails.deaths} />
-            <StatCard title="Recovered" value={displaydetails.recovered} />
+            <StatCard title="📊 Total Cases" value={displaydetails.cases} />
+            <StatCard title="💀 Deaths" value={displaydetails.deaths} />
+            <StatCard title="💚 Recovered" value={displaydetails.recovered} />
           </div>
 
           <div className="chart-container">
@@ -47,6 +62,7 @@ const displaydetails = countrydetails || data
               recovered={displaydetails.recovered}
             />
           </div>
+          <Footer />
         </>
       )}
     </div>

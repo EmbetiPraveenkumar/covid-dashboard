@@ -32,7 +32,7 @@ function Header({ countrydata ,countrydetails}) {
         }}
       >
         <img src={virus} alt="covid" width="30" />
-        World COVID-19 Dashboard
+        Global COVID-19 Dashboard
       </h1>
       <div className="country-select-container">
         <select

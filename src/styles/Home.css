@@ -1,0 +1,42 @@
+.home-container{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#1d2b64,#f8cdda);
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.hero-section{
+  text-align:center;
+  color:white;
+  max-width:700px;
+}
+
+.hero-section h1{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.hero-section p{
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:30px;
+}
+
+.start-btn{
+  padding:14px 30px;
+  font-size:16px;
+  border:none;
+  border-radius:8px;
+  background:white;
+  color:#1d2b64;
+  cursor:pointer;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.start-btn:hover{
+  background:#1d2b64;
+  color:white;
+}
